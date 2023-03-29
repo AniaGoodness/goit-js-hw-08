@@ -25,19 +25,11 @@ const galleryElements = galleryItems.map((item) =>
 
 imageGallery.insertAdjacentHTML("beforeend", galleryElements);
 
-const showOriginalImage = (event) => {
-    event.preventDefault();
-        if (event.target.nodeName !== "IMG") {
-        return;
-    }
 
-    let lightbox = new SimpleLightbox('.gallery a', { 
+const lightbox = new SimpleLightbox('.gallery a', { 
         captionType: "alt",
         captionsData: "alt",
-        captionDelay: 250, });
+        captionDelay: 400,
+        animationSpeed: 400,
+    });
     
-    return lightbox; 
-
-}
-    imageGallery.addEventListener("click", showOriginalImage);
-export { galleryElements, showOriginalImage };
