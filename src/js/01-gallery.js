@@ -10,6 +10,7 @@ console.log(galleryItems);
 
 
 const imageGallery = document.querySelector('.gallery');
+imageGallery.style.listStyle = "none";
 console.log(imageGallery);
 
 
