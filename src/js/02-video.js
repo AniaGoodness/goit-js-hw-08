@@ -16,7 +16,7 @@ const getCurrentTime = function (currentTime) {
 };
 
 
-player.on('timeupdate', _.throttle("videoplayerCurrentTime", 1000));
+player.on('timeupdate', throttle(getCurrentTime, 1000));
 
 
 player.setCurrentTime(JSON.parse(localStorage.getItem("videoplayerCurrentTime")) || 0);
